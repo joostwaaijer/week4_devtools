@@ -1,0 +1,31 @@
+{
+  "name": "seminar-week4-server",
+  "version": "1.0.0",
+  "description": "REST-API for the TODO-list application. Part of the course on Development Tools (2017-2018) at Saxion University",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/todoTest.js -R nyan",
+    "test:report": "mocha test/todoTest.js -R doc",
+    "test:coverage": "istanbul cover test/todoTest.js report text",
+    "test:coverage-html": "istanbul cover test/todoTest.js report html",
+    "start": "node index.js",
+    "lint": "eslint index.js server/*.js test/*.js",
+    "lint:fix": "eslint index.js server/*.js test/*.js --fix",
+    "jsdoc": "jsdoc index.js server test -r -d jsdoc",
+    "apidoc": "api-doc-generator --title My API Docs --input server/server.js --output apidoc"
+  },
+  "author": "Evert Duipmans",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-node": "^6.0.1",
+    "lodash": "^4.17.10",
+    "mocha": "^5.0.4",
+    "supertest": "^3.0.0"
+  }
+}
